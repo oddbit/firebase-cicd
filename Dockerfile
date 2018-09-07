@@ -1,3 +1,3 @@
-FROM node:6.14
+FROM node:8
 
 RUN npm install -g firebase-tools firebase-bolt typescript tslint
