@@ -1,7 +1,7 @@
 FROM node:$version
 
-RUN apt update && \
-    apt install software-properties-common && \
+RUN apt update -y && \
+    apt install -y software-properties-common && \
     add-apt-repository -y universe && \
     apt-get update && \
     apt-get install -y openjdk-8-jdk && \
