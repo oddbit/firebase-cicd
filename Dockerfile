@@ -1,6 +1,8 @@
 FROM node:$version
 
-RUN add-apt-repository -y universe && \
+RUN apt update && \
+    apt install software-properties-common && \
+    add-apt-repository -y universe && \
     apt-get update && \
     apt-get install -y openjdk-8-jdk && \
     apt-get install -y ant && \
