@@ -1,6 +1,7 @@
 FROM node:$version
 
-RUN apt-get update && \
+RUN add-apt-repository -y universe && \
+    apt-get update && \
     apt-get install -y openjdk-8-jdk && \
     apt-get install -y ant && \
     apt-get install ca-certificates-java && \
