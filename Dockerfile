@@ -1,13 +1,10 @@
 FROM node:$version
 
-RUN apt update -y && \
-    apt install -y software-properties-common && \
-    add-apt-repository -y ppa:openjdk/ppa && \
-    apt-get update && \
-    apt-get install -y openjdk-8-jdk && \
-    apt-get install -y ant && \
-    apt-get install ca-certificates-java && \
-    apt-get clean && \
+RUN apt-get -y update && \
+    apt-get -y install openjdk-8-jre && \
+    apt-get -y install ant && \
+    apt-get -y install ca-certificates-java && \
+    apt-get -y clean && \
     update-ca-certificates -f;
 
 ENV JAVA_HOME $(which java)
