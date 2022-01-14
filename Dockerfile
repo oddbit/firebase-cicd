@@ -2,7 +2,7 @@ FROM node:$version
 
 RUN apt update -y && \
     apt install -y software-properties-common && \
-    add-apt-repository -y universe && \
+    add-apt-repository -y ppa:openjdk/ppa && \
     apt-get update && \
     apt-get install -y openjdk-8-jdk && \
     apt-get install -y ant && \
